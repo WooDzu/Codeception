@@ -159,7 +159,7 @@ class PhalconMemorySession extends \Phalcon\Session\Adapter implements \Phalcon\
         return $this->isStarted;
     }
 
-    public function destroy()
+    public function destroy($session_id = null)
     {
         $this->isStarted = false;
         $this->data = array();
